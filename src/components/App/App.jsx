@@ -15,8 +15,6 @@ export const App = () => {
   }, [contacts]);
 
   const formSubmitHandler = data => {
-    //const { contacts } = this.state;
-
     contacts.find(({ name }) => name === data.name)
       ? alert(`${data.name} is already in contacts!`)
       : setContacts([data, ...contacts]);
